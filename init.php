@@ -33,7 +33,6 @@ class Af_Fullpost extends Plugin implements IHandler
 		// do not process an article more than once
 		if (strpos($article['plugin_data'], "fullpost,$owner_uid:") !== false) {
 			if (isset($article['stored']['content'])) $article['content'] = $article['stored']['content'];
-			break;
 		}
 
 		$json_conf = $this->host->get($this, 'json_conf');
